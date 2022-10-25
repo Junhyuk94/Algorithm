@@ -70,7 +70,6 @@ public class backjoon_1260 {
 				}
 			}
 		}
-		
 	}
 	
 	// bfs
@@ -92,10 +91,6 @@ public class backjoon_1260 {
 					queue.add(i);
 				}
 			}
-			
 		}
-		
 	}
 }
-
-
