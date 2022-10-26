@@ -1,4 +1,4 @@
-package jun.b1;
+package jun.backjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
