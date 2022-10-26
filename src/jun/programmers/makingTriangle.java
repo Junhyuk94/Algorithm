@@ -1,4 +1,4 @@
-package programmers;
+package jun.programmers;
 
 /*
  * 프로그래머스

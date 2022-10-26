@@ -1,4 +1,4 @@
-package programmers;
+package jun.programmers;
 import java.util.HashMap;
 
 /*
