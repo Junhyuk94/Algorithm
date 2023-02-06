@@ -8,6 +8,11 @@ import java.util.StringTokenizer;
 /*
  * backjoon 11659
  * 구간 합 구하기 4
+ * 일반적으로 배열에서 더하면 시간초과 되므로, 합배열 사용.
+ * 
+ * 구간 합 공식
+ * 	- i~j구간의 합 : S[j] - S[i-1]
+ * 
  * https://www.acmicpc.net/problem/11659
  */
 public class b_11659 {
@@ -20,16 +25,20 @@ public class b_11659 {
 		int size = Integer.parseInt(st.nextToken());
 		int count = Integer.parseInt(st.nextToken());
 		
-		int arr[] = new int[size]; 
+		// 합배열
+		int arrSum[] = new int[size+1];
+		arrSum[0] = 0;
 		
-		for(int i=0; i<size; i++) {
-			if(i==0) {
+		for(int i=1; i<size+1; i++) {
+			if(i==1) {
 				st = new StringTokenizer(br.readLine());
+				arrSum[i] = Integer.parseInt(st.nextToken());
+				continue;
 			}
-			arr[i] = Integer.parseInt(st.nextToken());
+			arrSum[i] = arrSum[i-1] + Integer.parseInt(st.nextToken());
 		}
 		
-		int start, end, sum = 0;
+		int start, end = 0;
 		
 		for(int i=0; i<count; i++) {
 			
@@ -38,13 +47,7 @@ public class b_11659 {
 			start = Integer.parseInt(st.nextToken());
 			end = Integer.parseInt(st.nextToken());
 			
-			sum = 0;
-			
-			for(int j=start-1; j<end; j++) {
-				sum += arr[j];
-			}
-			
-			System.out.println(sum); 	
+			System.out.println(arrSum[end] - arrSum[start-1]); 	
 		}
 	}
 }
