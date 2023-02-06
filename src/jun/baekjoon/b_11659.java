@@ -44,7 +44,7 @@ public class b_11659 {
 				sum += arr[j];
 			}
 			
-			System.out.println(sum);
+			System.out.println(sum); 
 		}
 	}
 }
