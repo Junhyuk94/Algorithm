@@ -51,7 +51,7 @@ public class b_2178 {
 	}
 	
 	// bfs Å½»ö 
-	static private void bfs(int[][] map, int[][] visited) {
+	private static void bfs(int[][] map, int[][] visited) {
 		
 		// Å¥ ¼±¾ð
 		Queue<int[]> queue = new LinkedList<>();
