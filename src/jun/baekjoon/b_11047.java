@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 /*
  * backjoon 11047
- * µ¿Àü
+ * ï¿½ï¿½ï¿½ï¿½
  * https://www.acmicpc.net/problem/11047
  */
 public class b_11047 {
@@ -17,9 +17,9 @@ public class b_11047 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		
-		// µ¿Àü°¹¼ö
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		int n = Integer.parseInt(st.nextToken()); 
-		// °¡Ä¡ÀÇ ÇÕ
+		// ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½
 		int k = Integer.parseInt(st.nextToken());
 		
 		int[] coin = new int[n];
@@ -29,7 +29,7 @@ public class b_11047 {
 		}
 		
 		
-		// ÇÊ¿äÇÑ µ¿ÀüÀÇ °³¼ö
+		// ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
 		int count = 0;
 		
 		for(int i=n-1; i>=0; i--) {
@@ -38,15 +38,15 @@ public class b_11047 {
 				break;
 			}
 			
-			// µ¿Àü ´ÜÀ§°¡ ´õ Å©¸é skip
+			// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Å©ï¿½ï¿½ skip
 			if(coin[i] > k) {
 				continue;
 			}
 			
-			// µ¿ÀüÀ¸·Î ³ª´©¾î ¸òÀ» °¹¼ö·Î Ä«¿îÆÃ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½ï¿½ï¿½ï¿½
 			count = count + (k / coin[i]);
 			
-			// ³ª¸ÓÁö°ªÀ¸·Î ´Ù½Ã ¼ÂÆÃ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			k = k % coin[i];
 			
 		}
